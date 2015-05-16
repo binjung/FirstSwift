@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var catAge: UITextField!
+    
+    @IBOutlet weak var message: UILabel!
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        
+        var age = catAge.text.toInt() // var = variable
+        
+        age = age! * 7 // age! gets rid of the error
+        
+        message.text = "Your Cat is \(age!) years old" // \(var!) means "" + var + ""
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
